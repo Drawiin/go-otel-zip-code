@@ -1,0 +1,5 @@
+FROM golang:latest
+LABEL authors="drawiin"
+WORKDIR /app
+COPY . .
+CMD ["tail", "-f", "/dev/null"]

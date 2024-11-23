@@ -1,0 +1,13 @@
+services:
+  zip-code-validation:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    environment:
+      - SERVICE_NAME=zip-code-validation
+      - TEMPERATURE_SERVICE_URL=http://service-b
+      - PORT=8080
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app

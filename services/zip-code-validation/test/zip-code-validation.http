@@ -1,0 +1,7 @@
+### Invalid code
+POST http://localhost:8080//zipcode
+Content-Type: application/json
+
+{
+  "cep": 10
+}

@@ -1,0 +1,30 @@
+services:
+  zip-code-validation:
+    build:
+      context: ./services/zip-code-validation
+      dockerfile: Dockerfile
+    environment:
+      - SERVICE_NAME=zip-code-validation
+      - TEMPERATURE_SERVICE_URL=http://temperature-service:8081
+      - PORT=8080
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./services/zip-code-validation:/app
+    depends_on:
+      - temperature-service
+
+  temperature-service:
+    build:
+      context: ./services/temperature
+      dockerfile: Dockerfile
+    environment:
+      - SERVICE_NAME=temperature-service
+      - CEP_SERVICE_URL=https://brasilapi.com.br/api/cep/v2
+      - WEATHER_API_URL=https://api.weatherapi.com/v1/current.json
+      - WEATHER_API_KEY=${WEATHER_API_KEY}
+      - PORT=8081
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./services/temperature:/app
