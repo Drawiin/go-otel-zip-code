@@ -30,7 +30,7 @@ func TestGetTemperatureSuccess(t *testing.T) {
 		WeatherAPIKey: "test-key",
 	}
 
-	temperatureService := service.NewCityTemperatureService(mockWebClient, cfg)
+	temperatureService := service.NewCityTemperatureService(mockWebClient, cfg, nil)
 
 	cep := "12345"
 	cepUrl := fmt.Sprintf("%s/%s", cfg.CEPServiceURL, cep)
@@ -58,7 +58,7 @@ func TestGetTemperatureCEPServiceError(t *testing.T) {
 		WeatherAPIKey: "test-key",
 	}
 
-	temperatureService := service.NewCityTemperatureService(mockWebClient, cfg)
+	temperatureService := service.NewCityTemperatureService(mockWebClient, cfg, nil)
 
 	cep := "12345"
 	cepUrl := fmt.Sprintf("%s/%s", cfg.CEPServiceURL, cep)
@@ -77,7 +77,7 @@ func TestGetTemperatureWeatherServiceError(t *testing.T) {
 		WeatherAPIKey: "test-key",
 	}
 
-	temperatureService := service.NewCityTemperatureService(mockWebClient, cfg)
+	temperatureService := service.NewCityTemperatureService(mockWebClient, cfg, nil)
 
 	cep := "12345"
 	cepUrl := fmt.Sprintf("%s/%s", cfg.CEPServiceURL, cep)
