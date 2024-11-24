@@ -13,8 +13,8 @@ Este projeto requer o Docker e o Docker Compose para ser executado, além de uma
 
 1. **Clone o Repositório**: Primeiro, clone o repositório do projeto em sua máquina local:
    ```sh
-   git clone <URL-do-repositório>
-   cd <nome-do-repositório>
+   git clone https://github.com/Drawiin/go-otel-zip-code
+   cd go-otel-zip-code
    ```
 
 2. **Configure a Chave de API**: Crie um arquivo `.env` na raiz do projeto e adicione sua chave de API:
