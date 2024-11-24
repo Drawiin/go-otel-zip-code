@@ -1,4 +1,3 @@
-```markdown
 ## Instruções para Executar o Projeto
 
 Este projeto requer o Docker e o Docker Compose para ser executado, além de uma chave de API válida para o serviço de clima.
@@ -35,4 +34,3 @@ Este projeto requer o Docker e o Docker Compose para ser executado, além de uma
 - **Teste com Arquivo Integrado**: Utilize o arquivo `integrated.http` para testar o serviço. Abra o arquivo e clique no botão `Send Request` para enviar uma requisição de exemplo.
 - **Ferramentas Alternativas**: Você também pode usar ferramentas como `curl`, `Postman` ou `Insomnia` para testar o serviço manualmente.
 - **Verificação de Traces**: Após realizar algumas requisições, você pode verificar os traces gerados acessando o Zipkin em `http://localhost:9411/`.
-```
